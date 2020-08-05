@@ -1,7 +1,7 @@
 version: "2"
 x-redash-service: &redash-service
   image: redash/redash:8.0.0.b32245
-  env_file: /home/env
+  env_file: /home/redash/env
   restart: always
 services:
   server:
