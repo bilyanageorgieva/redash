@@ -29,3 +29,13 @@ services:
     environment:
       QUEUES: "queries"
       WORKERS_COUNT: 2
+  nginx:
+    image: redash/nginx:latest
+    ports:
+      - "80:80"
+    depends_on:
+      - server
+    links:
+      - server:redash
+    restart: always
+    
